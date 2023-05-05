@@ -93,7 +93,6 @@ struct ContentView: View {
         }
         else {
             //Tie
-            
         }
         if (playerScore == 20) {
             playerScore = 0
