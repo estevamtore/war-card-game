@@ -16,7 +16,7 @@ struct ContentView: View {
     @State var cpuScore = 0
     
     var body: some View {
-
+        
         ZStack {
             
             Image("background-plain")
@@ -33,7 +33,7 @@ struct ContentView: View {
                     Spacer()
                     Image(cpuCard)
                     Spacer()
-
+                    
                 }
                 Spacer()
                 
@@ -50,7 +50,7 @@ struct ContentView: View {
                         Text("Player")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                            
+                        
                         Text(String(playerScore))
                             .font(.largeTitle)
                     }
@@ -64,10 +64,11 @@ struct ContentView: View {
                             .font(.largeTitle)
                     }
                     Spacer()
+                    
                 }
                 .foregroundColor(.white)
                 Spacer()
-
+                
             }
         }
     }
@@ -93,6 +94,14 @@ struct ContentView: View {
         else {
             //Tie
             
+        }
+        if (playerScore == 20) {
+            playerScore = 0
+            cpuScore = 0
+        }
+        if (cpuScore == 20) {
+            playerScore = 0
+            cpuScore = 0
         }
     }
 }
